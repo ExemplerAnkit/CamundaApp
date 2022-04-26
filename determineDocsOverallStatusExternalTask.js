@@ -26,6 +26,7 @@ const {
   // create a Client instance with custom configuration
   const client = new Client(config);
   
+  
   // subscribe to the topic: 'generateTasks'
   client.subscribe("determineOverallStatus", async function({ task, taskService }) {
       
