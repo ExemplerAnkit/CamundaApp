@@ -3,9 +3,11 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start" : "node ./bin/www & node ./generateTasksExternalTask.js & node ./determineDocsOverallStatusExternalTask.js & node ./assessRiskExternalTask.js"
   },
   "dependencies": {
+    "@azure/eventgrid": "^4.9.0",
+    "axios": "^0.26.1",
     "camunda-external-task-client-js": "^2.1.1",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
